@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^fm5.safo$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.fm5.safo$
+RewriteCond %{REQUEST_URI} !www/
+RewriteRule (.*) /www/$1 [L]
