@@ -52,7 +52,6 @@ class Task extends Component {
 
     render() {
         let index = 0;
-        console.log("render");
 
         let subtasksHtml = this.props.subtasks.map(subtask => <Subtask
             key={index}
@@ -95,7 +94,10 @@ Task.propTypes = {
     name: PropTypes.string,
     author: PropTypes.string,
     deadline: PropTypes.string,
-    subtasks: PropTypes.array,
+    subtasks: PropTypes.oneOfType([
+        PropTypes.array,
+        PropTypes.object,
+    ]),
     addSubtaskToTask: PropTypes.func,
     index: PropTypes.number,
 };

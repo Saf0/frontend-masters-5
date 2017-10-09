@@ -39,10 +39,7 @@ Subtask.propTypes = {
 
 Subtask.defaultProps = {
     name: '',
-    status: PropTypes.oneOfType([
-        PropTypes.array,
-        PropTypes.object,
-    ]),
+    status: 'NEW',
 };
 
 export default Subtask;

@@ -30,8 +30,8 @@ class TodoContainer extends Component {
             name: this.state.newTaskName,
             deadline: '2017-10-10 15:50:00',
             author: 'Safo',
-            // subtasks: [],
-            subtasks: List(),
+            subtasks: [],
+            // subtasks: List(),
         });
 
         this.setState({tasks: tasks});
@@ -41,8 +41,8 @@ class TodoContainer extends Component {
         let tasks = this.state.tasks;
         let task = tasks[taskIndex];
 
-        // task.subtasks.push(subtask);
-        task.subtasks = task.subtasks.push(subtask);
+        task.subtasks.push(subtask);
+        // task.subtasks = task.subtasks.push(subtask);
 
         this.setState({tasks: tasks});
     }
@@ -53,8 +53,8 @@ class TodoContainer extends Component {
         for (let i = 0; i < n; i++) {
             let subtasksCount = Math.floor((Math.random() * 5) + 5);
 
-            // let subtasks = [];
-            let subtasks = List();
+            let subtasks = [];
+            // let subtasks = List();
 
             for (let j = 0; j < subtasksCount; j++) {
                 let rand = Math.floor(Math.random() * 3);
@@ -73,8 +73,8 @@ class TodoContainer extends Component {
                     status: status
                 };
 
-                // subtasks.push(subtask);
-                subtasks = subtasks.push(subtask);
+                subtasks.push(subtask);
+                // subtasks = subtasks.push(subtask);
             }
 
             tasks.push({
